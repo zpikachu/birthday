@@ -1,0 +1,108 @@
+ @font-face {
+    font-family: 'candle';
+    src: url('KR First Years Dings.ttf') format('truetype'); /* Adjust the path if needed */
+    font-weight: normal;
+    font-style: normal;
+}
+.number-container {
+    position: absolute; /* Position the number absolutely */
+    top: -10%; /* Adjust top position */
+    left: 30%; /* Center horizontally */
+    font-size: 48px; /* Size of the numbers */
+    font-weight: bold; /* Make the number bold */
+    background: linear-gradient(to bottom, #FF4500 0%, #FFD700 20%, #ff009d 100%); /* Fire to green gradient */
+    -webkit-background-clip: text; /* Clip the background to the text */
+    -webkit-text-fill-color: transparent; /* Make the text fill transparent to show gradient */
+    text-fill-color: transparent;
+    font-family:candle ;
+}
+:root {
+    --cake-color: #F8CA8E;
+    --icing-color: #F990A0;
+    --icing-highlight: #F7B7C0;
+}
+
+.box-canvas {
+    position:absolute;
+    bottom:0;
+    margin: auto;
+    display: block;
+    width: 150px;
+    height: 170px;
+    bottom: 10px;
+    z-index: 1;
+}
+
+.plate {
+    position: absolute;
+    bottom: 15px;
+    width: 175px;
+    height: 90px;
+    background: #BFBFBF;
+    border-radius: 50%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.cake-side {
+    position: absolute;
+    top: 55px;
+    width: 150px;
+    height: 90px;
+    background: var(--cake-color);
+    border-radius: 0 0 50% 50%;
+    overflow: hidden;
+}
+
+.cake-side::before {
+    content: '';
+    position: absolute;
+    width: 150px;
+    height: 90px;
+    background: white;
+    border-radius: 0 0 50% 50%;
+    top: -20px;
+}
+
+.cake-side::after {
+    content: '';
+    position: absolute;
+    width: 150px;
+    height: 90px;
+    background: var(--cake-color);
+    border-radius: 0 0 50% 50%;
+    top: -30px;
+}
+
+.cake-top {
+    position: absolute;
+    top: 20px;
+    width: 150px;
+    height: 75px;
+    background: var(--icing-color);
+    border-radius: 50%;
+    border-bottom: 4px solid var(--icing-highlight);
+}
+
+.drips {
+    position: absolute;
+    display: flex;
+    width: 150px;
+    height: 70px;
+    top: 55px;
+}
+
+.drip {
+    background: var(--icing-color);
+    border-radius: 0 0 50% 50% / 0 0 20% 20%;
+}
+
+.drip:nth-child(1) { height: 50px; width: 20px; }
+.drip:nth-child(2) { height: 50px; width: 15px; }
+.drip:nth-child(3) { height: 50px; width: 20px; }
+.drip:nth-child(4) { height: 60px; width: 25px; }
+.drip:nth-child(5) { height: 65px; width: 25px; }
+.drip:nth-child(6) { height: 50px; width: 20px; }
+.drip:nth-child(7) { height: 60px; width: 15px; }
+.drip:nth-child(8) { height: 35px; width: 10px; }  
+

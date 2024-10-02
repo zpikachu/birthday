@@ -1,0 +1,92 @@
+.moon {
+    position: relative;
+    width: 60vw;  /* Relative to viewport width */
+    height: 60vw; /* Maintain 1:1 aspect ratio */
+    max-width: 300px;  /* Limit max size for larger screens */
+    max-height: 300px;
+    background-color: #d3d3d3;
+    border-radius: 50%;
+    box-shadow: inset -5vw -5vw 8vw rgba(0, 0, 0, 0.5), 
+                inset 3vw 3vw 5vw rgba(255, 255, 255, 0.1), 
+                0 0 10vw 3vw rgba(255, 255, 255, 0.1);
+}
+
+.crater {
+    position: absolute;
+    background-color: #b0b0b0;
+    border-radius: 50%;
+    box-shadow: inset -1.5vw -1.5vw 2.5vw rgba(0, 0, 0, 0.5),
+                inset 1vw 1vw 2vw rgba(255, 255, 255, 0.1);
+}
+
+.crater1 {
+    width: 14%;
+    height: 14%;
+    top: 17%;
+    left: 27%;
+}
+
+.crater2 {
+    width: 10%;
+    height: 10%;
+    top: 53%;
+    left: 13%;
+}
+
+.crater3 {
+    width: 8%;
+    height: 8%;
+    top: 66%;
+    right: 23%;
+}
+
+.crater4 {
+    width: 6%;
+    height: 6%;
+    top: 33%;
+    right: 17%;
+}
+
+.crater5 {
+    width: 5%;
+    height: 5%;
+    bottom: 17%;
+    left: 40%;
+}
+
+/* Media queries for mobile responsiveness */
+@media (max-width: 768px) { /* Tablet size */
+    .moon {
+        width: 50vw;
+        height: 50vw;
+        max-width: 200px;
+        max-height: 200px;
+        box-shadow: inset -4vw -4vw 6vw rgba(0, 0, 0, 0.5), 
+                    inset 2vw 2vw 4vw rgba(255, 255, 255, 0.1), 
+                    0 0 8vw 2vw rgba(255, 255, 255, 0.1);
+    }
+
+    .crater1 { width: 12%; height: 12%; top: 15%; left: 25%; }
+    .crater2 { width: 9%; height: 9%; top: 50%; left: 10%; }
+    .crater3 { width: 7%; height: 7%; top: 60%; right: 20%; }
+    .crater4 { width: 5%; height: 5%; top: 30%; right: 15%; }
+    .crater5 { width: 4%; height: 4%; bottom: 15%; left: 35%; }
+}
+
+@media (max-width: 480px) { /* Mobile size */
+    .moon {
+        width: 40vw;
+        height: 40vw;
+        max-width: 150px;
+        max-height: 150px;
+        box-shadow: inset -3vw -3vw 5vw rgba(0, 0, 0, 0.5), 
+                    inset 1.5vw 1.5vw 3vw rgba(255, 255, 255, 0.1), 
+                    0 0 6vw 1.5vw rgba(255, 255, 255, 0.1);
+    }
+
+    .crater1 { width: 10%; height: 10%; top: 13%; left: 23%; }
+    .crater2 { width: 8%; height: 8%; top: 48%; left: 8%; }
+    .crater3 { width: 6%; height: 6%; top: 58%; right: 18%; }
+    .crater4 { width: 4%; height: 4%; top: 28%; right: 12%; }
+    .crater5 { width: 3%; height: 3%; bottom: 13%; left: 30%; }
+}

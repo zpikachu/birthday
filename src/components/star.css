@@ -1,0 +1,77 @@
+/* src/components/Stars.css */
+
+/* Star container */
+.stars-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    z-index: -1; /* Make sure stars are in the background */
+  }
+  
+  /* Star styles */
+  .star {
+    position: absolute;
+    border-radius: 50%;
+    animation: twinkle 1.5s infinite alternate, moveStars 5s linear infinite;
+    opacity: 0; /* Start with stars hidden */
+  }
+  
+  /* Twinkling effect for stars */
+  @keyframes twinkle {
+    0% {
+      box-shadow: 0 0 5px #fff, 0 0 10px #fff;
+      transform: scale(1);
+    }
+    50% {
+      box-shadow: 0 0 15px #ffcc00, 0 0 20px #ffcc00; /* Bright glow */
+      transform: scale(1.2);
+    }
+    100% {
+      box-shadow: 0 0 5px #fff, 0 0 10px #fff;
+      transform: scale(1);
+    }
+  }
+  
+  /* Moving star animation */
+  @keyframes moveStars {
+    0% {
+      bottom: -10px;
+      left: calc(100vw * var(--start-pos));
+      opacity: 0; /* Keep stars hidden initially */
+      transform: translateY(0) scale(0.5);
+    }
+    5% {
+      opacity: 1; /* Make stars visible */
+    }
+    100% {
+      bottom: 100vh;
+      opacity: 0;
+      transform: translateY(-100vh) scale(0.8);
+    }
+  }
+  
+  /* For larger screens */
+  .star {
+    width: 8px;
+    height: 8px;
+  }
+  
+  /* For tablets */
+  @media (max-width: 768px) {
+    .star {
+      width: 6px;
+      height: 6px;
+    }
+  }
+  
+  /* For mobile phones */
+  @media (max-width: 480px) {
+    .star {
+      width: 4px;
+      height: 4px;
+    }
+  }
+  

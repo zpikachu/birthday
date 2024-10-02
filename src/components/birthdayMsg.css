@@ -1,0 +1,54 @@
+@font-face {
+  font-family: "MyFont";
+  src: url("./Fontspring-DEMO-blue_vinyl_bold_ps_ot.otf");
+}
+
+.heading {
+  font-family: MYFont;
+  font-size: 45px; /* default for larger screens */
+  animation: animate 5s linear infinite;
+  text-transform: uppercase;
+}
+
+@media (max-width: 768px) {
+  .heading {
+    font-size: 30px; /* smaller font for tablets */
+  }
+}
+
+@media (max-width: 480px) {
+  .heading {
+    font-size: 20px; /* even smaller font for mobile */
+  }
+}
+
+
+
+@keyframes animate {
+  0%,
+  18%,
+  20%,
+  50.1%,
+  60%,
+  65.1%,
+  80%,
+  90.1%,
+  92% {
+    color: #0e3742;
+    text-shadow: none;
+  }
+  18.1%,
+  20.1%,
+  30%,
+  50%,
+  60.1%,
+  65%,
+  80.1%,
+  90%,
+  92.1%,
+  100% {
+    color: #fff;
+    text-shadow: 0 0 10px #03bcf4, 0 0 20px #03bcf4, 0 0 40px #03bcf4,
+      0 0 80px #03bcf4, 0 0 160px #03bcf4;
+  }
+}
