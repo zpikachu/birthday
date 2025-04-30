@@ -21,7 +21,7 @@ function Cake() {
     <div className="drip"></div>
 </div>
 <div className="cake-top">
-    (age != 0?<div className="number-container">{age}</div>:<div>i</div>) 
+    <div className="number-container">{age}</div>
 </div>
 </div>
 </div>
